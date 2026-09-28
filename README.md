@@ -1,4 +1,4 @@
-# F1 Pantheon
+# The F1 Pantheon
 
 ### A Bayesian ranking of Formula One driver performance, 1982–present
 
@@ -37,11 +37,11 @@ The Pantheon score is a **relative model score**, not a percentage or probabilit
 
 The central quantity in the model is a latent driver-season state,
 
-\[
+$$
 \alpha_{i,t},
-\]
+$$
 
-which represents the model's estimate of driver \(i\)'s **on-track performance in season \(t\)** relative to the average occupied Formula One seat in that season.
+which represents the model's estimate of driver $i$'s **on-track performance in season $t$** relative to the average occupied Formula One seat in that season.
 
 For modern seasons, this is identified primarily using:
 
@@ -53,9 +53,9 @@ For modern seasons, this is identified primarily using:
 
 The model simultaneously estimates a constructor-season effect,
 
-\[
+$$
 \beta_{c,t},
-\]
+$$
 
 so that driver performance is separated, as far as the available evidence permits, from the performance of the car.
 
@@ -67,13 +67,13 @@ A team-familiarity term additionally accounts for the effect of a driver becomin
 
 Career rankings combine two components:
 
-\[
+$$
 \text{Pantheon score}
 =
 0.60\,\text{Peak}
 +
 0.40\,\text{Career value}.
-\]
+$$
 
 ### Peak
 
@@ -83,9 +83,9 @@ The incomplete 2026 season contributes only its completed fraction of a season.
 
 At the current Round 15 snapshot,
 
-\[
+$$
 f_{2026}=\frac{15}{23}=0.6522.
-\]
+$$
 
 If 2026 enters a driver's five-season peak window, it therefore occupies 0.6522 of one season, with the remaining filled by the next-best completed season.
 
@@ -93,19 +93,19 @@ If 2026 enters a driver's five-season peak window, it therefore occupies 0.6522 
 
 Career value rewards sustained above-average performance:
 
-\[
+$$
 S_i = \sum_t \max(0,\alpha_{i,t}),
-\]
+$$
 
 followed by square-root damping,
 
-\[
+$$
 C_i=\sqrt{S_i}.
-\]
+$$
 
 This prevents career length alone from overwhelming peak performance while still rewarding drivers who sustain positive performance over many seasons.
 
-For the incomplete 2026 season, positive career surplus is weighted by the same \(15/23\) exposure factor.
+For the incomplete 2026 season, positive career surplus is weighted by the same $15/23$ exposure factor.
 
 Peak and Career value are independently normalised within every posterior draw before being combined.
 
@@ -126,7 +126,7 @@ The likelihood includes:
 - qualifying common-session teammate contrasts;
 - Q1 team levels.
 
-Heavy-tailed Student-\(t\) likelihoods are used to reduce sensitivity to unusual observations.
+Heavy-tailed Student-$t$ likelihoods are used to reduce sensitivity to unusual observations.
 
 Driver ability evolves through time using a state-space structure, allowing information to be shared between adjacent seasons without assuming that a driver's performance is constant throughout their career.
 
@@ -217,7 +217,7 @@ Pantheon v2.2 LIVE incorporates evidence from the first **15 of 23 scheduled Gra
 
 The 2026 latent driver state itself is **not shrunk by 15/23**. The model estimates the current 2026 driver state using all available evidence through Round 15, together with information propagated through the temporal model.
 
-The \(15/23\) factor is applied only when the incomplete season contributes to **Peak and Career value**, preventing a partial season from receiving the same career-ranking weight as a completed season.
+The $15/23$ factor is applied only when the incomplete season contributes to **Peak and Career value**, preventing a partial season from receiving the same career-ranking weight as a completed season.
 
 The frozen **Pantheon v2.1 1982–2025** release remains the historical benchmark. LIVE releases do not overwrite it.
 
@@ -269,8 +269,8 @@ The current production posterior uses:
 For the current production fit:
 
 - zero divergent transitions were observed;
-- no \(\hat R\) values exceeded 1.01;
-- the maximum \(\hat R\) was approximately 1.006;
+- no $\hat{R}$ values exceeded 1.01;
+- the maximum $\hat{R}$ was approximately 1.006;
 - minimum bulk effective sample size exceeded 1,000.
 
 The Round-15 release is identified by snapshot hash:
@@ -331,4 +331,4 @@ cf1f82aaab32
 
 ## Status
 
-Pantheon is an independent statistical research project and is not affiliated with Formula One, the FIA or any Formula One team.
+This is an independent statistical research project and is not affiliated with Formula One, the FIA or any Formula One team.
