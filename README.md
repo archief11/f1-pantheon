@@ -67,13 +67,7 @@ A team-familiarity term additionally accounts for the effect of a driver becomin
 
 Career rankings combine two components:
 
-$$
-\text{Pantheon score}
-=
-0.60\,\text{Peak}
-+
-0.40\,\text{Career value}.
-$$
+$$\mathrm{Pantheon\ score}=0.60\,\mathrm{Peak}+0.40\,\mathrm{Career\ value}$$
 
 ### Peak
 
