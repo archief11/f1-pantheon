@@ -179,3 +179,47 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# ============================================================
+# F1 Pantheon project-specific ignores
+# ============================================================
+
+# Bayesian posterior traces / large model artefacts
+*.nc
+*.zarr
+*.netcdf
+
+# Local model-output working directories
+model_outputs/
+
+# Downloaded / cached API data
+cache/
+.cache/
+api_cache/
+
+# Temporary data files
+*.tmp
+*.temp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Local configuration / secrets
+.env
+.env.*
+
+# VS Code local workspace settings
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python caches
+__pycache__/
+*.py[cod]
