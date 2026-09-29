@@ -1,13 +1,13 @@
 # The F1 Pantheon
 
-### A Bayesian ranking of Formula One driver performance, 1982–present
+### A Bayesian ranking of Formula One driver performance, 1982-present
 
 The F1 Pantheon is a statistical model for comparing Formula One drivers across eras. Rather than ranking drivers by championship points, wins or other career achievements, the Pantheon estimates **driving performance**, separating it from constructor performance and team familiarity.
 
 The final **Pantheon score** balances a driver's highest-performing seasons with sustained positive performance across their career.
 
 > **Current release:** Pantheon v2.2 LIVE — 2026 Round 15  
-> **Coverage:** 1982–2026  
+> **Coverage:** 1982-2026  
 > **2026 season exposure:** 15/23 Grands Prix (65.2%)
 
 ![F1 Pantheon dashboard](docs/assets/pantheon-dashboard.png)
@@ -97,7 +97,7 @@ $$
 C_i=\sqrt{S_i}.
 $$
 
-This prevents career length alone from overwhelming peak performance while still rewarding drivers who sustain positive performance over many seasons.
+This prevents career length alone from overwhelming peak performance whilst still rewarding drivers who sustain positive performance over many seasons.
 
 For the incomplete 2026 season, positive career surplus is weighted by the same $15/23$ exposure factor.
 
@@ -107,9 +107,9 @@ Peak and Career value are independently normalised within every posterior draw b
 
 ## Model
 
-Pantheon is a joint Bayesian driver–constructor model.
+Pantheon is a joint Bayesian driver-constructor model.
 
-### Modern era: 1996–present
+### Modern era: 1996-present
 
 Modern race and qualifying data are transformed into both **within-team contrasts** and **team-level observations**.
 
@@ -126,7 +126,7 @@ Driver ability evolves through time using a state-space structure, allowing info
 
 Constructor effects are estimated separately for each season.
 
-### Historical era: 1982–1995
+### Historical era: 1982-1995
 
 Detailed modern timing data are unavailable for the earlier period.
 
@@ -135,7 +135,7 @@ Historical seasons therefore use ordinal evidence:
 - qualifying starting-grid order;
 - classified race running order, excluding retirements from the finishing-order comparison.
 
-These observations are modelled using Plackett–Luce likelihoods and connected to the same latent driver-season states used by the modern model.
+These observations are modelled using Plackett-Luce likelihoods and connected to the same latent driver-season states used by the modern model.
 
 ---
 
@@ -213,7 +213,7 @@ The 2026 latent driver state itself is **not shrunk by 15/23**. The model estima
 
 The $15/23$ factor is applied only when the incomplete season contributes to **Peak and Career value**, preventing a partial season from receiving the same career-ranking weight as a completed season.
 
-The frozen **Pantheon v2.1 1982–2025** release remains the historical benchmark. LIVE releases do not overwrite it.
+The frozen **Pantheon v2.1 1982-2025** release remains the historical benchmark. LIVE releases do not overwrite it.
 
 ---
 
@@ -306,7 +306,7 @@ docs/index.html
 
 ### Pantheon v2.1
 
-Frozen historical release covering **1982–2025**.
+Frozen historical release covering **1982-2025**.
 
 ### Pantheon v2.2 LIVE
 
