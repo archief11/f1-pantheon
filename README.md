@@ -6,7 +6,7 @@ The F1 Pantheon is a statistical model for comparing Formula One drivers across 
 
 The final **Pantheon score** balances a driver's highest-performing seasons with sustained positive performance across their career.
 
-> **Current release:** Pantheon v2.2 LIVE — 2026 Round 15  
+> **Current release:** Pantheon v2.2 LIVE - 2026 Round 15  
 > **Coverage:** 1982-2026  
 > **2026 season exposure:** 15/23 Grands Prix (65.2%)
 
